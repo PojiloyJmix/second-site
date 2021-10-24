@@ -1,0 +1,114 @@
+.wrapper-swiper {
+   min-width: 100%;
+   padding: 30px;
+}
+
+.image-slider {
+   padding: 30px 10px 70px 10px;
+}
+.image-slider__image {
+   margin: 0 0 12px 0;
+}
+.image-slider__image,
+.image-slider__text {
+   text-align: center;
+   position: relative;
+}
+.image-slider__image img {
+   max-width: 100%;
+}
+/* ================================= */
+.text {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   color: #ff4a32;
+}
+.text__title,
+.text__price {
+   font-size: 14px;
+   line-height: calc(18 / 14 * 100%);
+   padding: 0 0 3px 0;
+}
+.text__price {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+.price-one {
+   padding: 0 4px 0 0;
+   color: #000;
+}
+.price-tree {
+   color: rgba(0, 9, 0, 0.3);
+}
+
+/* ================================= */
+.image-slider__wrapper {
+   margin: 0 0 20px 0;
+}
+
+.image-slider .swiper-button-prev::after,
+.image-slider .swiper-button-next::after {
+   opacity: 0;
+   font-size: 30px;
+
+   position: relative;
+   position: absolute;
+   top: 70%;
+   left: 15px;
+   z-index: 4;
+   transform: scale(1) translate(-70%, 0);
+}
+.image-slider .swiper-button-prev div,
+.image-slider .swiper-button-next div {
+   border-radius: 22px;
+   content: "";
+   display: block;
+   width: 40px;
+   height: 40px;
+   background-color: rgba(204, 204, 204, 0.3);
+   position: absolute;
+}
+.image-slider .swiper-button-prev div {
+   top: 80%;
+   left: 45%;
+   z-index: 2;
+   transform: scale(1) translate(-50%, -30%);
+}
+.image-slider .swiper-button-next div {
+   top: 80%;
+   left: 15%;
+   z-index: 2;
+   transform: scale(1) translate(-30%, -30%);
+}
+.image-slider .swiper-button-prev img {
+   position: absolute;
+   top: 80%;
+   left: 45%;
+   z-index: 2;
+   transform: scale(1) translate(-50%, -11%);
+}
+.image-slider .swiper-button-next img {
+   position: absolute;
+   top: 80%;
+   left: 45%;
+   z-index: 2;
+   transform: scale(1) translate(-50%, -11%);
+}
+
+.image-slider .swiper-scrollbar-drag {
+   cursor: pointer;
+   background-color: #ff4a32;
+}
+@media (max-width: 480px) {
+   .image-slider .swiper-button-prev div,
+   .image-slider .swiper-button-next div,
+   .image-slider .swiper-button-next img,
+   .image-slider .swiper-button-prev img {
+      opacity: 0;
+      display: none;
+   }
+}
